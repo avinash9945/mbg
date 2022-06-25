@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>
+MBG
+</title>
+
+<style>
+body, html {
+  height: 100%;
+margin:0;
+padding:0;
+background-color:black;
+}
+
+.bg {
+  background-image: url("2.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+</style>
+</head>
+<body>
+<div class="bg" id="ch">
+</div>
+<script>
+let a = [1,2,3,4];
+i=0;
+function go(){
+let x = document.getElementById('ch');
+if(i>a.length-1){
+i = 0;
+}else{
+let p = "url('"+a[i]+".jpg')";
+x.style.backgroundImage = p ;
+i++;
+}
+}
+setInterval(go,3000)
+
+</script>
+</body>
+</html>
