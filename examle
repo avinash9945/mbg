@@ -1,0 +1,15 @@
+<html>
+<body>
+<button onclick="go()">GO</button>
+<script>
+function go(){
+const music = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+music.play();
+music.loop =true;
+music.playbackRate = 2;
+
+}
+
+</script>
+</body>
+</html>
