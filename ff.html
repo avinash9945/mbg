@@ -26,14 +26,12 @@ background-color:black;
 </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
 <script>
-    var sound = new Howl({
-      src: ['https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'],
-      volume: 1.0,
-      onend: function () {
-        alert('We finished with the setup!');
-      }
-    });
-    sound.play()
+   <audio src='https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'></audio>
+const audioContext = new AudioContext();
+const element = document.querySelector(audio);
+const source = audioContext.createMediaElementSource(element);
+source.connect(audioContext.destination)
+audio.play();
 let a = [1,2,3,4,5,6];
 i=0;
 function go(){
